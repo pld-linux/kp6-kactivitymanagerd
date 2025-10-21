@@ -1,17 +1,17 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.4.5
+%define		kdeplasmaver	6.5.0
 %define		qtver		5.15.2
 %define		kpname		kactivitymanagerd
 Summary:	kactivitymanagerd
 Name:		kp6-%{kpname}
-Version:	6.4.5
-Release:	2
+Version:	6.5.0
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	e93d83604c9c11fa859220dc5f91f833
+# Source0-md5:	6e0675e37300d27645eb83aa1ac51732
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Concurrent-devel
 BuildRequires:	Qt6Core-devel >= %{qtver}
@@ -67,15 +67,15 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{kpname}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libexecdir}/kactivitymanagerd
-%attr(755,root,root) %{_libdir}/libkactivitymanagerd_plugin.so
+%{_libdir}/libkactivitymanagerd_plugin.so
 %dir %{_libdir}/qt6/plugins/kactivitymanagerd1
-%attr(755,root,root) %{_libdir}/qt6/plugins/kactivitymanagerd1/org.kde.ActivityManager.ActivityRunner.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kactivitymanagerd1/org.kde.ActivityManager.ActivityTemplates.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kactivitymanagerd1/org.kde.ActivityManager.GlobalShortcuts.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kactivitymanagerd1/org.kde.ActivityManager.LibreOfficeEventSpy.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kactivitymanagerd1/org.kde.ActivityManager.RecentlyUsedEventSpy.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kactivitymanagerd1/org.kde.ActivityManager.ResourceScoring.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kactivitymanagerd1/org.kde.ActivityManager.RunApplication.so
+%{_libdir}/qt6/plugins/kactivitymanagerd1/org.kde.ActivityManager.ActivityRunner.so
+%{_libdir}/qt6/plugins/kactivitymanagerd1/org.kde.ActivityManager.ActivityTemplates.so
+%{_libdir}/qt6/plugins/kactivitymanagerd1/org.kde.ActivityManager.GlobalShortcuts.so
+%{_libdir}/qt6/plugins/kactivitymanagerd1/org.kde.ActivityManager.LibreOfficeEventSpy.so
+%{_libdir}/qt6/plugins/kactivitymanagerd1/org.kde.ActivityManager.RecentlyUsedEventSpy.so
+%{_libdir}/qt6/plugins/kactivitymanagerd1/org.kde.ActivityManager.ResourceScoring.so
+%{_libdir}/qt6/plugins/kactivitymanagerd1/org.kde.ActivityManager.RunApplication.so
 %{systemduserunitdir}/plasma-kactivitymanagerd.service
 %{_datadir}/dbus-1/services/org.kde.ActivityManager.service
 %{_datadir}/qlogging-categories6/kactivitymanagerd.categories

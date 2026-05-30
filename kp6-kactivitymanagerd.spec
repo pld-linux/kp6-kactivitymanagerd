@@ -41,6 +41,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 System service to manage user's activities, track the usage patterns
 etc.
 
+%description -l pl.UTF-8
+Usługa systemowa do zarządzania aktywnościami użytkownika, śledzi
+wzory zachowań, itp.
+
 %prep
 %setup -q -n %{kpname}-%{version}
 

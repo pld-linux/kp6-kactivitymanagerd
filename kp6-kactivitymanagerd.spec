@@ -1,17 +1,17 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.7.2
+%define		kdeplasmaver	6.7.3
 %define		qtver		5.15.2
 %define		kpname		kactivitymanagerd
 Summary:	kactivitymanagerd
 Name:		kp6-%{kpname}
-Version:	6.7.2
+Version:	6.7.3
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	2f81e90df4e6ab83e988d77549d9beb7
+# Source0-md5:	f52851eb9508ff0d64e433198427405a
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Concurrent-devel
 BuildRequires:	Qt6Core-devel >= %{qtver}
